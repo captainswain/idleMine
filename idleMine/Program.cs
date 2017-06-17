@@ -10,7 +10,8 @@ namespace idleMine
 {
     class Program
     {
-        //--------- Configuration ------------------------
+
+        //--------- Configuration ----------
 
         static string processName = "marlin";
         // full path start command or path to batch file.
