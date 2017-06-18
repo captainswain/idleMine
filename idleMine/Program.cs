@@ -48,7 +48,8 @@ namespace idleMine
                 process.Start();
 
                 Console.WriteLine("Started mining.");
-            }else if (IdleTime() < minutesIdle && Running("marlin"))
+            }
+            else if (IdleTime() < minutesIdle && Running("marlin"))
             {
                 Console.WriteLine("Current Status: not idle.");
                 try
@@ -58,11 +59,11 @@ namespace idleMine
                         proc.Kill();
                         Console.WriteLine("Killed miner.");
                     }
-                    }
-                    catch (Exception ex)
-                    {
+                }
+                catch (Exception ex)
+                {
                     Console.WriteLine(ex.Message);
-                    }
+                }
             }
 
         }
@@ -73,7 +74,7 @@ namespace idleMine
         }
         public static void print(string output)
         {
-                Console.Write("\r{0}", output);
+            Console.Write("\r{0}", output);
 
         }
 
@@ -83,7 +84,7 @@ namespace idleMine
             if (processname.Length == 0)
                 return false;
 
-            return true; 
+            return true;
         }
 
     }
