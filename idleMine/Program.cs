@@ -5,6 +5,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Timers;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace idleMine
 {
@@ -22,14 +23,18 @@ namespace idleMine
 
         static void Main(string[] args)
         {
-            Console.WriteLine("IdleMiner v0.0.1");
-            Console.WriteLine("Current Status: Not idle.");
+            //Console.WriteLine("IdleMiner v0.0.1");
+            //Console.WriteLine("Current Status: Not idle.");
 
-            Timer timer = new Timer(1000);
-            timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            timer.Start();
+            //Timer timer = new Timer(1000);
+            //timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            //timer.Start();
             //Console.Write("Press any key to exit... \n");
-            Console.ReadKey();
+            //Console.ReadKey();
+            idleMine.Main mainform = new Main();
+
+            // This will start the message loop, and show the mainform...
+            Application.Run(mainform);
         }
 
 
